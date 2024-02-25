@@ -1,0 +1,16 @@
+classes = [YOUR_CLASS_NAME, YOUR_OTHER_CLASS_NAME]
+#此块放在主函数外部且最后。下方基本可以不用修改，上方每次写一个新的方法就将其加入后面的参数列表中，包括主函数。
+ 
+ 
+def register():
+    for cls in classes:
+        bpy.utils.register_class(cls)
+ 
+def unregister():
+    for cls in classes:
+        bpy.utils.unregister_class(cls)
+ 
+ 
+ 
+if __name__ == "__main__":
+    register()
